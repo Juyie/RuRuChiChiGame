@@ -17,7 +17,7 @@ public class FindAnswer : MonoBehaviour
 
     private void Update()
     {
-        if (effect.active == true && !correct)
+        if (effect.activeSelf == true && !correct)
         {
             if (time < 0)
             {

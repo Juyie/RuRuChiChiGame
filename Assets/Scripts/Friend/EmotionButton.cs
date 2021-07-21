@@ -11,13 +11,11 @@ public class EmotionButton : MonoBehaviour
     private float[] times;
 
     private bool bTag;
-    private int num;
 
     // Start is called before the first frame update
     void Start()
     {
         bTag = true;
-        num = 0;
     }
 
     // Update is called once per frame

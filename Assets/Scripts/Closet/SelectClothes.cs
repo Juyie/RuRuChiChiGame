@@ -38,12 +38,12 @@ public class SelectClothes : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     {
         if (isMove)
         {
-            if (effect.GetComponent<RectTransform>().localScale.x < 4.0f)
+            if (effect.GetComponent<RectTransform>().localScale.x < 2.0f)
             {
-                effect.GetComponent<RectTransform>().localScale = new Vector3(effect.GetComponent<RectTransform>().localScale.x + 0.2f, effect.GetComponent<RectTransform>().localScale.y + 0.2f, effect.GetComponent<RectTransform>().localScale.z);
+                effect.GetComponent<RectTransform>().localScale = new Vector3(effect.GetComponent<RectTransform>().localScale.x + 2f * Time.deltaTime, effect.GetComponent<RectTransform>().localScale.y + 2f * Time.deltaTime, effect.GetComponent<RectTransform>().localScale.z);
                 Debug.Log(effect.GetComponent<RectTransform>().localScale.x + ", " + effect.GetComponent<RectTransform>().localScale.y);
             }
-            if(effect.GetComponent<RectTransform>().localScale.x >= 4.0f && rectTransform.anchoredPosition.y > -700)
+            if(effect.GetComponent<RectTransform>().localScale.x >= 2.0f && rectTransform.anchoredPosition.y > -700)
             {
                 effect.GetComponent<RectTransform>().anchoredPosition = new Vector3(1000f, 1000f, 0f);
                 rectTransform.Translate(new Vector3(-665f - now.x, -600f - now.y) * Time.deltaTime * speed);

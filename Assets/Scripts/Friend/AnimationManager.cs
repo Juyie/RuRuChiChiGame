@@ -40,6 +40,7 @@ public class AnimationManager : MonoBehaviour
     private bool bChichi;
     private bool bKid;
     private int kid_num;
+    private bool b1 = true;
 
     // Start is called before the first frame update
     void Start()
@@ -151,12 +152,13 @@ public class AnimationManager : MonoBehaviour
                 kid_time[kid_num] -= Time.deltaTime;
         }
 
-        if (bKid == false)
+        if (bKid == false && b1)
         {
             kid.SetActive(false);
             bubble.SetActive(true);
             audioSource.clip = dubbings[9];
             audioSource.Play();
+            b1 = false;
         }
     }
 }

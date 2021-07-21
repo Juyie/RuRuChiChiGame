@@ -24,7 +24,7 @@ public class EffectOn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(effect.active == true)
+        if(effect.activeSelf == true)
         {
             if(time < 0)
             {
